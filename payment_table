@@ -1,0 +1,7 @@
+CREATE TABLE payment (
+    payment_id INT NOT NULL AUTO_INCREMENT,
+    appointment_id INT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (payment_id),
+    FOREIGN KEY (appointment_id) REFERENCES appointment(appointment_id)
+);
