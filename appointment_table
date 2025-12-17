@@ -1,0 +1,12 @@
+CREATE TABLE appointment (
+    appointment_id INT NOT NULL AUTO_INCREMENT,
+    pet_id INT NOT NULL,
+    vet_id INT NOT NULL,
+    appointment_date DATE NOT NULL,
+    appointment_time TIME NOT NULL,
+    purpose VARCHAR(255) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    PRIMARY KEY (appointment_id),
+    FOREIGN KEY (pet_id) REFERENCES pet(pet_id),
+    FOREIGN KEY (vet_id) REFERENCES staff(staff_id)
+);
