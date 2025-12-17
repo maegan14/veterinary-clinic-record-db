@@ -1,0 +1,11 @@
+CREATE TABLE treatment (
+    treatment_id INT NOT NULL AUTO_INCREMENT,
+    pet_id INT NOT NULL,
+    diagnosis VARCHAR(255) NOT NULL,
+    treatment_details TEXT DEFAULT NULL,
+    prescription TEXT DEFAULT NULL,
+    vaccine_status VARCHAR(50) DEFAULT NULL,
+    treatment_date DATE NOT NULL,
+    PRIMARY KEY (treatment_id),
+    FOREIGN KEY (pet_id) REFERENCES pet(pet_id)
+);
